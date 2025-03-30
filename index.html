@@ -19,17 +19,17 @@
         .image-container{
             position: relative;
             display: inline-block;
-            width: 90%;
-            max width: 1050px;
+            width: 100%;
+            max-width: 600px;
             height: auto; /* Puedes ajustar la altura según lo necesites */
-            margin-top: 20px
+            margin-top: 20px;
             text-align: center; /* Asegura que las imágenes estén centradas en el contenedor */
 }
 
 
         .image-container img {
             position: absolute;
-            width: 90%;
+            width: 100%;
             height: auto;
             object-fit: contain; /* Mantiene la proporción de la imagen */
             opacity: 0;
@@ -52,11 +52,11 @@
          .overlay-text {
             position: absolute;
  max-width: 100%;
-            top: 120px;
+            top: 10vw;
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            font-size: 3rem;
+            font-size: 8vw;
             font-weight: bold;
             background-color: NONE;
             padding: 5px 5px;
@@ -101,9 +101,9 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            width: 120px;
+            width: 20vw;
             text-align: center;
-            font-size: 2rem;
+            font-size: 5vw;
             font-weight: bold;
             color: #333;
         }
@@ -115,7 +115,7 @@
 
         .title-below-video {
             margin-top: 40px;
-            font-size: 2.5rem;
+            font-size: 6vw;
             font-weight: bold;
             color: #333;
             text-align: center;
@@ -214,6 +214,36 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             background: none;
         }
+@media (max-width: 768px) { 
+    .overlay-text {
+        font-size: 5vw;
+        top: 15vw;
+    }
+
+    .text-below-video {
+        font-size: 5vw;
+        width: 90%; /* Hacer que ocupe más espacio en móviles */
+    }
+
+    .image-grid {
+        flex-direction: column; /* Apila las imágenes en móviles */
+    }
+
+    .countdown-container {
+        flex-wrap: wrap; /* Permite que los números se acomoden mejor */
+        gap: 10px;
+    }
+
+    .countdown-box {
+        width: 80px;
+        font-size: 1.5rem;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
     </style>
 </head>
 <body>
