@@ -298,12 +298,10 @@
     </div>
 
 <script>
-    window.addEventListener("load", function() {
+    window.addEventListener("click", function() {
         var audio = document.getElementById("background-music");
-        audio.volume = 0.5; // Ajusta el volumen (opcional)
-        audio.play().catch(error => {
-            console.log("El navegador bloqueó la reproducción automática. Se requiere interacción del usuario.");
-        });
+        audio.muted = false; // Quita el muteo cuando el usuario haga clic
+        audio.play().catch(error => console.log("Error al reproducir audio:", error));
     });
 </script>
 
