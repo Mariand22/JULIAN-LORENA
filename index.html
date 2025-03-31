@@ -130,6 +130,25 @@
             color: #333;
             text-align: center;
         }
+        .countdown-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar elementos */
+    gap: 5px; /* Reducir espacio entre "Faltan" y el contador */
+}
+
+@media (max-width: 600px) {
+    .countdown-wrapper {
+        gap: 2px; /* Reducir aún más en móviles */
+    }
+    .countdown-container {
+        margin-top: 0px; /* Reducir espacio extra */
+    }
+    .title-below-images {
+        font-size: 6vw;
+        margin-bottom: 0px; /* Eliminar márgenes innecesarios */
+    }
+}
           /* Ajustes para pantallas pequeñas (móviles) */
     @media (max-width: 600px) {
         .countdown-box {
@@ -315,14 +334,8 @@
     </audio>
         
         <!-- Título debajo del video -->
-        <p class="title-below-images">Faltan</p>
-        
-        <!--
-        <video controls>
-            <source src="video.mp4" type="video/mp4">
-            Tu navegador no soporta el video.
-        </video>
- -->
+    <div class="countdown-wrapper">
+        <p class="title-below-images">Faltan</p> 
         <!-- Contador regresivo -->
         <div class="countdown-container">
             <div class="countdown-box" id="days-box">
@@ -342,6 +355,7 @@
                 <div id="seconds">0</div>
             </div>
         </div>
+     </div>
 
         <!-- Título debajo del video -->
         <p class="title-below-video">¡Nos Casamos!</p>
